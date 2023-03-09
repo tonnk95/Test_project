@@ -1,0 +1,135 @@
+html{
+	background-color: #f5eae7;
+}
+body{
+	width: 90%;
+	margin: 0 auto;
+	background-color: #f3fdf4;
+	line-height: 1.3;
+}
+.containerr{
+	width: 100%;
+	height: 200px;
+	margin: 0 auto;
+	position: relative;
+}
+img.slide{
+	width: 100%;
+	height: 200px;
+}
+img.slide:not(:first-child){
+	display: none;
+}
+
+#next{
+	right: 6%;
+	border-radius: 50%;
+}
+#pre{
+	left: 6%;
+	border-radius: 50%;
+}
+.change-img{
+	text-align: center;
+	margin-top: -25px;
+}
+button{
+	background-color: pink;
+	width: 20px;
+	height: 20px;
+	border: none;
+	font-weight: bold;
+	border-radius: 50%;
+}
+button.active{
+	background: pink;
+	color: white;
+}
+header h1{
+	color: rgb(4, 4, 167);
+	position: absolute;
+	top: 80px;
+	left: 350px;
+	
+}
+header .logo{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	top:50px;
+	left: 150px;
+}
+.mq{
+	background-color: #eeedf2;
+	width: 100%;
+	height: 20px;
+	padding-top: 15px;
+    color: red;
+	font-weight: bold;
+}
+.noidung{
+	width: 100%;
+}
+.nd{
+	width: 80%;
+	float: left;
+}
+.as{
+	width: 20%;
+	float: left;
+	
+}
+
+.trai1-1{
+	width: 100%;
+	float: left;
+}
+
+a{
+	text-decoration: none;
+}
+a:hover{
+	color: blue;
+}
+.fullname{
+	width: 100%;
+}
+.lb{
+	width: 30%;
+	margin-top: 10px;
+	height: 26px;
+	padding-top: 5px;
+	font-weight: bold;
+	padding-left: 30px;
+}
+.ip{
+	width: 60%;
+	margin-top: 10px;
+	height: 30px;
+}
+select{
+	width: 50%;
+	height: 30px;
+}
+.fullname1{
+	width: 100%;
+	margin-left: 20px;
+}
+.lb1{
+	width: 30%;
+	font-weight: bold;
+	padding-left: 30px;
+}
+.txt{
+	width: 60%;
+	height: 50px;
+}
+.content{
+	width: 100%;
+	margin-left: 20px;
+	padding-top: 100px;
+}
+.bnt-side{
+	width: 60%;
+	margin: 0 auto;
+}

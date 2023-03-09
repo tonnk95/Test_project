@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<title>Tonnk</title>
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+<body>
+	<header>
+		<div  class="containerr">
+			<div id="demo" class="carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+				<ul class="carousel-indicators">
+				  <li data-target="#demo" data-slide-to="0" class="active"></li>
+				  <li data-target="#demo" data-slide-to="1"></li>
+				  <li data-target="#demo" data-slide-to="2"></li>
+				  <li data-target="#demo" data-slide-to="3"></li>
+				</ul>
+				<!-- The slideshow -->
+				<div class="carousel-inner">
+				  <div class="carousel-item active">
+					<img src="img/1.jpg" alt="1" style="width: 100%; height: 200px;">
+				  </div>
+				  <div class="carousel-item">
+					<img src="img/2.jpg" alt="2" style="width: 100%; height: 200px;">
+				  </div>
+				  <div class="carousel-item">
+					<img src="img/3.webp" alt="3" style="width: 100%; height: 200px;">
+				  </div>
+				  <div class="carousel-item">
+					<img src="img/4.jpg" alt="4" style="width: 100%; height: 200px;">
+				  </div>
+				</div>
+				<!-- Left and right controls -->
+				<a class="carousel-control-prev" href="#demo" data-slide="prev">
+				  <span class="carousel-control-prev-icon"></span>
+				</a>
+				<a class="carousel-control-next" href="#demo" data-slide="next">
+				  <span class="carousel-control-next-icon"></span>
+				</a>
+			  </div>
+		</div>
+		<h1>CỔNG THÔNG TIN ĐIỆN TỬ TỈNH PHÚ THỌ</h1>
+		<img src="logo.png" class="logo">
+	</header>
+	<div class="mq">
+		<marquee behavior="scrool"> Người mắc Covid-19 hãy cập nhật sức khoẻ khi có dấu hiệu bất thường...</marquee>
+	</div>
+	<hr width="100%" size="1">
+	<div class="noidung">
+		<div class="as">
+			<div style="height: 440px;">
+				<div>
+					<hr size=2 width="100%" align="left">
+					<a href="#" style="font-size: 18px;">Khai báo F0</a> <br><br>
+					<a href="#" style="font-size: 18px;">Cập nhật sức khoẻ</a> <br><br>
+					<a href="#" style="font-size: 18px;">Góp ý</a><br> <br>
+				</div>
+			</div>
+		</div>
+		<div class="nd">
+			<article>
+				<section>
+					<div class="trai1-1">
+							<label class="lb" >Họ tên: <span style="color: red">*</span></label>
+							<input type="text" class="ip" id="inp-fullname" placeholder="Họ tên">
+
+							<label class="lb">Email:</label>
+							<input type="text" class="ip" placeholder="Email">
+
+							<label class="lb" >Điện thoại: <span style="color: red">*</span></label>
+							<input type="number"  class="ip" id="inp-address" placeholder="Số điện thoại">
+
+							<label class="lb" >Ngành nghề:</label>
+							<select>
+								<option value="0">Chọn ngành nghề:</option>
+								<option value="1">IT</option>
+								<option value="2">Giáo viên</option>
+								<option value="3">Bộ đội</option>
+							</select>
+							<br>
+							<label class="lb" >Huyện/thành phố:</label>
+							<select>
+								<option value="0">TP. Việt Trì</option>
+								<option value="1">Cẩm Khê</option>
+								<option value="2">Phù Ninh</option>
+								<option value="3">Lâm Thao</option>
+							</select>
+							<br>
+							<label class="lb" >Xã/Phường:</label>
+							<select>
+								<option value="0">Xã Kim Đức</option>
+								<option value="1">Xã Hùng Lô</option>
+								<option value="2">Gia Cẩm</option>
+								<option value="3">Thọ Sơn</option>
+							</select>
+					
+							<label class="lb1" >Nội dung: <span style="color: red">*</span></label>
+							<textarea class="txt" placeholder="Nội dung góp ý" id="txt-noidung"></textarea>
+					</div>
+					<div class="form-group text-center">
+						<button class="btn btn-success btn-group" id="btn-submit" style="width:120px; height:35px;">Gửi phản hồi</button>
+						<button class="btn btn-danger btn-group" id="btn-reset" style="width:86px; height:35px;">Nhập lại</button>
+					</div>
+				</section>
+				<div style="text-align: center; margin-top: 50px;">
+					<pre>Design by Trần Mạnh Chung TTLT1D22</pre>
+				</div>
+			</article>
+		</div>
+		
+	</div>
+
+	<script>
+        var gOBJECT = {
+            fullname : "",
+            address : "",
+			noidung : "",
+        }
+        $(document).ready(function(){
+        
+            $("#btn-submit").on("click", function() {
+                onBtnSubmitClick();
+            });
+            $("#btn-reset").on("click", function() {
+                onBtnResetClick();
+            });
+    
+        });
+    
+        function onBtnSubmitClick(){
+            getData(gOBJECT);
+    
+            if(checkData(gOBJECT)){
+                alert("Gửi phản hồi thành công !");
+            }
+        }
+        function onBtnResetClick(){
+            resetData();
+            alert("Reset thành công !")
+        }
+
+        function getData(param){
+            "use strict"
+            var vFullname = document.getElementById("inp-fullname"); // truy xuất phần tử input thông qua thuộc tính id
+            var vAddress = document.getElementById("inp-address");
+			var vNoidung = document.getElementById("txt-noidung");
+            
+            param.fullname = vFullname.value; // gán giá trị cho thuộc tính của object paramOrder
+            param.address = vAddress.value;
+			param.noidung = vNoidung.value;
+        }
+        function checkData(param){
+            if(param.fullname == ""){
+                alert("Bạn phải nhập Họ tên !");
+                return false;
+            } else if(param.address == ""){
+                alert("Bạn phải nhập Số điện thoại !");
+                return false;
+            } else if(param.noidung == ""){
+                alert("Bạn phải nhập Nội dung phản ánh !");
+                return false;
+            }
+            return true;
+        }
+        function resetData(){
+            "use strict"
+            var vFullname = document.getElementById("inp-fullname"); // truy xuất phần tử input thông qua thuộc tính id
+            var vAddress = document.getElementById("inp-address");
+            
+            vFullname.value = '';
+            vAddress.value = '';
+
+        }
+    </script>
+</body>
+</html>
